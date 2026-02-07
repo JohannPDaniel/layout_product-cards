@@ -1,98 +1,109 @@
 @use './variables' as *;
-@use './mixins' as *;
 
 .card {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
   box-sizing: border-box;
-  width: 200px;
-  padding: 18px;
-  border-radius: 8px;
 
-  background-color: $white;
+  width: $card-width;
+  padding: $card-padding;
+
+  background-color: $color-white;
+  border-radius: $card-radius;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
-  &__image {
-    align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 
+  &__computer {
     width: 160px;
     height: 134px;
 
     background-image: url('../images/imac.jpeg');
     background-repeat: no-repeat;
-    background-position: center;
     background-size: contain;
+    background-position: center;
   }
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    width: 100%;
   }
 
   &__title {
     margin: 0;
 
     font-family: $font-family;
-    font-size: $font-sm;
+    font-size: $font-small;
     font-weight: 500;
-    color: $black;
+    color: $color-black;
   }
 
   &__code {
     margin: 0;
+
     font-family: $font-family;
-    font-size: $font-sm;
-    color: $gray;
+    font-size: $font-small;
+    font-weight: 400;
+    color: $color-gray;
   }
 
   &__rating {
-    @include flex-between;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__reviews {
     margin: 0;
+
     font-family: $font-family;
-    font-size: $font-sm;
-    color: $black;
+    font-size: $font-small;
+    color: $color-black;
   }
 
   &__price {
-    @include flex-between;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__price-title {
     font-family: $font-family;
-    font-size: $font-sm;
-    color: $gray;
+    font-size: $font-small;
+    color: $color-gray;
   }
 
   &__price-value {
     font-family: $font-family;
-    font-size: $font-sm;
+    font-size: $font-small;
     font-weight: 700;
-    color: $black;
+    color: $color-black;
   }
 
   &__button {
-    @include flex-center;
-
+    width: 100%;
     height: 40px;
-    border: 1px solid $blue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: $color-blue;
     border-radius: 5px;
 
     font-family: $font-family;
     font-weight: 700;
-    color: $white;
+    color: $color-white;
     text-decoration: none;
 
-    background-color: $blue;
-
     &:hover {
-      color: $blue;
-      background-color: $white;
+      background-color: $color-white;
+      color: $color-blue;
+      border: 1px solid $color-blue;
     }
   }
 }
