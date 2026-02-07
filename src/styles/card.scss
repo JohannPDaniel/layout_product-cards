@@ -1,0 +1,135 @@
+@use './mixins';
+@use './variables';
+
+.card {
+  width: 200px;
+  height: 350px;
+  padding: 18px;
+
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  &__computer {
+    width: 160px;
+    height: 134px;
+
+    background-image: url('../images/imac.jpeg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &__content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__title {
+    margin: 0;
+
+    font-size: 13px;
+    font-weight: 500;
+    font-family: variables.$font-family;
+    color: #000;
+  }
+
+  &__code {
+    margin: 0;
+
+    font-size: 13px;
+    font-weight: 400;
+    font-family: variables.$font-family;
+    color: #616070;
+  }
+
+  &__stars {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__stars-list {
+    display: flex;
+    gap: 5px;
+  }
+
+  &__star {
+    width: 16px;
+    height: 16px;
+
+    background-image: url('../images/star.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &--active {
+      background-image: url('../images/star-active.svg');
+    }
+  }
+
+  &__reviews {
+    margin: 0;
+
+    font-size: 13px;
+    font-weight: 400;
+    font-family: variables.$font-family;
+    color: #000;
+    text-align: end;
+  }
+
+  &__price {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price-title {
+    margin: 0;
+
+    font-size: 13px;
+    font-weight: 400;
+    font-family: variables.$font-family;
+    color: #616070;
+  }
+
+  &__price-value {
+    margin: 0;
+
+    font-size: 13px;
+    font-weight: 700;
+    font-family: variables.$font-family;
+    color: #000;
+  }
+
+  &__button {
+    width: 100%;
+    height: 40px;
+
+    background-color: #00acdc;
+    border: 1px solid #00acdc;
+    border-radius: 5px;
+
+    font-family: variables.$font-family;
+    font-weight: 700;
+    color: #fff;
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: #fff;
+      color: #00acdc;
+    }
+  }
+}
