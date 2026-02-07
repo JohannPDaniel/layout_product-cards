@@ -1,11 +1,14 @@
-@use './mixins' as *;
-@use './variables' as *;
+@use './variables';
+@use './mixins';
+@use './stars';
+@use './card';
 
 body {
   margin: 0;
-  width: 100%;
-  height: 100vh;
-  color: $color-body;
+  font-family: variables.$font-family;
+  background-color: #f3f3f3;
 
-  @include flex-centered-content;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
 }
