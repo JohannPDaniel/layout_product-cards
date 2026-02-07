@@ -4,11 +4,13 @@
 @use './card';
 
 body {
-  margin: 0;
-  font-family: variables.$font-family;
-  background-color: #f3f3f3;
-
   display: flex;
   justify-content: center;
+
+  margin: 0;
   padding-top: 40px;
+
+  font-family: variables.$font-family;
+
+  background-color: #f3f3f3;
 }

@@ -2,26 +2,28 @@
 @use './mixins' as *;
 
 .card {
-  width: 200px;
-  padding: 18px;
-  box-sizing: border-box;
-
-  background-color: $white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-
   display: flex;
   flex-direction: column;
   gap: 20px;
 
+  box-sizing: border-box;
+  width: 200px;
+  padding: 18px;
+  border-radius: 8px;
+
+  background-color: $white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
   &__image {
+    align-self: center;
+
     width: 160px;
     height: 134px;
+
     background-image: url('../images/imac.jpeg');
     background-repeat: no-repeat;
-    background-size: contain;
     background-position: center;
-    align-self: center;
+    background-size: contain;
   }
 
   &__content {
@@ -32,16 +34,17 @@
 
   &__title {
     margin: 0;
+
+    font-family: $font-family;
     font-size: $font-sm;
     font-weight: 500;
-    font-family: $font-family;
     color: $black;
   }
 
   &__code {
     margin: 0;
-    font-size: $font-sm;
     font-family: $font-family;
+    font-size: $font-sm;
     color: $gray;
   }
 
@@ -51,8 +54,8 @@
 
   &__reviews {
     margin: 0;
-    font-size: $font-sm;
     font-family: $font-family;
+    font-size: $font-sm;
     color: $black;
   }
 
@@ -61,23 +64,22 @@
   }
 
   &__price-title {
-    font-size: $font-sm;
     font-family: $font-family;
+    font-size: $font-sm;
     color: $gray;
   }
 
   &__price-value {
+    font-family: $font-family;
     font-size: $font-sm;
     font-weight: 700;
-    font-family: $font-family;
     color: $black;
   }
 
   &__button {
     @include flex-center;
-    height: 40px;
 
-    background-color: $blue;
+    height: 40px;
     border: 1px solid $blue;
     border-radius: 5px;
 
@@ -86,9 +88,11 @@
     color: $white;
     text-decoration: none;
 
+    background-color: $blue;
+
     &:hover {
-      background-color: $white;
       color: $blue;
+      background-color: $white;
     }
   }
 }
